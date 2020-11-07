@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Three Little Circles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- d3 is for data visualization -->
+		<script type="text/javascript" src="lib/d3.min.js"></script>
+
+</head>
+<body>
+	<p>This example implements the "Three Little Circles" tutorial by Mike Bostock.</p>
+	<a href="https://bost.ocks.org/mike/circles/">https://bost.ocks.org/mike/circles/</a>
+	<p>The script on this page contains all commands in the tutorial but as comments. Un-comment the script snippets, one at a time,
+	to see their effect.</p>
+	
+	<svg width="720" height="120">
+	  <circle cx="40" cy="60" r="10"></circle>
+	  <circle cx="80" cy="60" r="10"></circle>
+	  <circle cx="120" cy="60" r="10"></circle>
+	</svg>
+	
+
+	
+	<script>
+		// Remove the "//" from each snippet, one at a time, and reload the file to see the result.
+		// Snippet
+		var circle = d3.selectAll("circle");
+		//circle.style("fill", "steelblue");
+		//circle.attr("r", 30);
+		
+		//Snippet 
+		// Uncomment this once to see its effect but then comment it out again before trying the subsequent snippets
+		//circle.attr("cx", function() { return Math.random() * 720; });
+		
+		//Snippet
+		circle.data([32, 57, 112]);
+		
+		//Snippet
+		//circle.attr("r", function(d) { return Math.sqrt(d); });
+		
+		//Snippet
+		//circle.attr("cx", function(d, i) { return i * 100 + 30; });
+		
+		//Snippet
+		//var svg = d3.select("svg");
+		//var circle = svg.selectAll("circle")
+		//				.data([32, 57, 112, 293]);
+		//var circleEnter = circle.enter().append("circle");
+		//circleEnter.attr("cy", 60);
+		//circleEnter.style("fill", "steelblue");
+		//circleEnter.attr("cx", function(d, i) { return i * 100 + 30; });
+		//circleEnter.attr("r", function(d) { return Math.sqrt(d); });
+		
+		//Snippet
+		//svg.selectAll("circle")
+		//	.data([32, 57, 112, 293])
+		//  .enter().append("circle")
+		//	.attr("cy", 60)
+		//	.style("fill", "steelblue")
+		//	.attr("cx", function(d, i) { return i * 100 + 30; })
+		//	.attr("r", function(d) { return Math.sqrt(d); });
+		
+		//Snippet
+		//var circle = svg.selectAll("circle")
+		//		.data([32, 57]);
+		//circle.exit().remove();
+		
+		//Snippet
+		//var circle = svg.selectAll("circle")
+		//	.data([32, 57, 293], function(d) { return d; });
+		//circle.enter().append("circle")
+		//	.attr("cy", 60)
+		//	.style("fill", "steelblue")
+		//	.attr("cx", function(d, i) { return i * 100 + 30; })
+		//	.attr("r", function(d) { return Math.sqrt(d); });
+		//circle.exit().remove();
+		
+	</script>
+	
+</body>
+</html>
