@@ -7,9 +7,10 @@ GenRoI <- function(n) {
     
   for (i in 1:n) {
     # Generate a sample of Uniform[0,1]
-    U <- runif(1,0,1)
+    U <- runif(1, 0, 1)
   
     # Check the chain of IF conditions
+    # and give a sample of x based on the value of U
     if ( U <= 0.07) 
       X[i] <- 9
     else if (0.07 < U && U <= 0.22)
@@ -28,3 +29,6 @@ GenRoI <- function(n) {
   
   return(X)
 }
+
+run <- GenRoI(1000)
+hist(run, breaks = c(5:20), freq = FALSE)
